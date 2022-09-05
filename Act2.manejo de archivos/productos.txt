@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Sauvage",
+    "precio": 100,
+    "thumbnail": "https://perfugroupar.vtexassets.com/arquivos/ids/157719-300-300?v=637886662415800000&width=300&height=300&aspect=true",
+    "id": 1
+  },
+  {
+    "nombre": "Miss Dior",
+    "precio": 150,
+    "thumbnail": "https://perfugroupar.vtexassets.com/arquivos/ids/174466-300-300?v=637889124085500000&width=300&height=300&aspect=true",
+    "id": 2
+  },
+  {
+    "nombre": "J'Adore",
+    "precio": 170,
+    "thumbnail": "https://perfugroupar.vtexassets.com/arquivos/ids/158251-300-300?v=637681173850300000&width=300&height=300&aspect=true",
+    "id": 3
+  },
+  {
+    "nombre": "Dior Homme",
+    "precio": 140,
+    "thumbnail": "https://perfugroupar.vtexassets.com/arquivos/ids/157706-300-300?v=637681010927200000&width=300&height=300&aspect=true",
+    "id": 4
+  },
+  {
+    "nombre": "Poison Girl",
+    "precio": 150,
+    "thumbnail": "https://perfugroupar.vtexassets.com/arquivos/ids/158300-300-300?v=637681215072530000&width=300&height=300&aspect=true",
+    "id": 5
+  }
+]
