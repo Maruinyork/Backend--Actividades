@@ -11,11 +11,19 @@
 
 
 [![all.png](https://i.postimg.cc/HLdfbKT7/all.png)](https://postimg.cc/pmcGHsh2)
+
 [![busqueda-por-id.png](https://i.postimg.cc/nc0XB846/busqueda-por-id.png)](https://postimg.cc/pp5VM61Z)
+
 [![actualizacion.png](https://i.postimg.cc/x89dNgcf/actualizacion.png)](https://postimg.cc/XGDWTffm)
+
 [![inexistente.png](https://i.postimg.cc/NGbsP6KX/inexistente.png)](https://postimg.cc/V5rPJbBs)
+
 [![agregado.png](https://i.postimg.cc/RVDMvvQV/agregado.png)](https://postimg.cc/F70tZ5B2)
+
 [![eliminado.png](https://i.postimg.cc/wMnbb4LH/eliminado.png)](https://postimg.cc/RJQRWRgb)
+
 [![busqueda-por-puerto.png](https://i.postimg.cc/NfrnrYv0/busqueda-por-puerto.png)](https://postimg.cc/dLw6zb1M)
+
 [![busqueda-por-id8.png](https://i.postimg.cc/XYfDQ8JS/busqueda-por-id8.png)](https://postimg.cc/TKP9PngC)
+
 [![formulario.png](https://i.postimg.cc/23p2xbNS/formulario.png)](https://postimg.cc/30BX8wws)
