@@ -20,7 +20,7 @@ Utilizar bootstrap para maquetar la vista creada por dicho motor de plantillas y
 
 HBS
 
-<a href='https://postimg.cc/1n3tQqv9' target='_blank'><img src='https://i.postimg.cc/1n3tQqv9/hbs1.png' border='0' alt='hbs1'/></a>
+[![hbs1.png](https://i.postimg.cc/3RgD2jpD/hbs1.png)](https://postimg.cc/1n3tQqv9)
 
 [![hbs2.png](https://i.postimg.cc/Y9wv24V2/hbs2.png)](https://postimg.cc/3yn8nwYz)
 
