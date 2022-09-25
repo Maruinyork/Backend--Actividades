@@ -1,0 +1,29 @@
+html 
+
+    head
+        title='Lista de productos'
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    body
+        a(href='/' class="text-dark") Agregar producto
+        h1='Lista de productos'
+        hr
+        if products.length>0
+            table(class="table table-warning table-striped mx-3 mt-4")
+                tr 
+                    th(scope="col")='#'
+                    th(scope="col")='Nombre'
+                    th(scope="col")='Precio'
+                    th(scope="col")='Imagen'
+                for producto in products
+                    tr
+                        td=producto.id
+                        td=producto.title
+                        td=producto.price
+                        td
+                            img(src=producto.thumbnail width=100 height=100)
+        else 
+            h2='No hay productos :('
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        
