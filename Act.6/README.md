@@ -6,7 +6,7 @@ Cuando un cliente se conecte, recibirá la lista de productos a representar en l
 
 [![test0.jpg](https://i.postimg.cc/cJmLgGQz/test0.jpg)](https://postimg.cc/gwxWQ5ty)
 
-[![test1.jpg](https://i.postimg.cc/VLQvVgLD/test1.jpg)](https://postimg.cc/t7k91h6x)
+[![test2.jpg](https://i.postimg.cc/LXfhT9b6/test2.jpg)](https://postimg.cc/Q98XN3DR)
 
 [![test2.jpg](https://i.postimg.cc/t4mHLRNp/test2.jpg)](https://postimg.cc/RWf8tBYD)
 
