@@ -35,11 +35,11 @@ io.on('connection', async (socket) => {
 
   // carga inicial de productos
   const productos = await contenedor.getAll()
-  socket.emit('bienvenidoLista', productos)
+  socket.emit('listaInicial', productos)
 
   // carga inicial de mensajes
   const mensajes = await chat.getAll()
-  socket.emit('listaMensajesBienvenida', mensajes)
+  socket.emit('listaMensajes', mensajes)
 
   // actualizacion de mensajes
   socket.on('nuevoMensaje', async (data) => {

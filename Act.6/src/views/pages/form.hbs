@@ -192,19 +192,19 @@
             data.forEach( (mensaje) => {
                 $('#historial-mensajes').append(
                 `
-                <small style="display:block"> - <em style="color:#9f9f9f">[${mensaje.date}]</em> <strong style="color:green">${mensaje.email}</strong>: ${mensaje.message} </small>
+                <small style="display:block"><strong style="color:blue">${mensaje.email}</strong><em style="color:brown">[${mensaje.date}]</em>:<em style="color:green">${mensaje.message}</em></small>
                 `
                 )
             })
         })
         
-        socket.on('listaMensajesBienvenida', (data) => {
+        socket.on('listaMensajes', (data) => {
             console.log(data);
             $('#historial-mensajes').empty();
             data.forEach( (mensaje) => {
                 $('#historial-mensajes').append(
                 `
-                <small style="display:block"> - <em style="color:#9f9f9f">[${mensaje.date}]</em> <strong style="color:green">${mensaje.email}</strong>: ${mensaje.message} </small>
+                <small style="display:block"><strong style="color:blue">${mensaje.email}</strong> <span style="color:brown">[${mensaje.date}]</span>:<em style="color:green"> ${mensaje.message}</em> </small>
                 `
                 )
             })
@@ -228,7 +228,7 @@
             
         })
         
-        socket.on('bienvenidoLista', (data) => {
+        socket.on('listaInicial', (data) => {
             $('#table-body').empty();
             data.forEach( (element) => {
             
