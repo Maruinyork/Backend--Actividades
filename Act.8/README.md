@@ -7,3 +7,8 @@ Desarrollar también un script que utilizando knex cree las tablas necesarias pa
 >> Notas:
 Definir una carpeta DB para almacenar la base datos SQLite3 llamada ecommerce
 
+[![1.jpg](https://i.postimg.cc/y8MgvkbR/1.jpg)](https://postimg.cc/9DBQfFVX)
+
+[![2.jpg](https://i.postimg.cc/T3Vfv1Pg/2.jpg)](https://postimg.cc/87zqh1Mz)
+
+[![3.jpg](https://i.postimg.cc/vmXyDKfm/3.jpg)](https://postimg.cc/d77px4WM)
