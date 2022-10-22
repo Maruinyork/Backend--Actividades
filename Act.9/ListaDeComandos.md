@@ -10,6 +10,8 @@ use ecommerce;
 db.createCollection('productos');
 db.createCollection('carritos');
 ```
+[![collections.jpg](https://i.postimg.cc/DZZ2pjHC/collections.jpg)](https://postimg.cc/LqcKnTHf)
+
 
 - Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. 
 
@@ -204,12 +206,23 @@ db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerc
 ```
 resp: { ok: 1 }
 
+- Muestro los usuarios creados, uno en admin y el otro en la db ecommerce
+
 ```console
 show users
+
 [ { _id: 'ecommerce.pepe',
     userId: UUID("218fa314-d9df-4663-8661-c650c556704c"),
     user: 'pepe',
     db: 'ecommerce',
+    roles: [ { role: 'read', db: 'ecommerce' } ],
+    mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ] } ]
+
+
+[ { _id: 'admin.pepeadmin',
+    userId: UUID("cde6d309-6e3e-43c8-8764-d0b9358f83c6"),
+    user: 'pepeadmin',
+    db: 'admin',
     roles: [ { role: 'read', db: 'ecommerce' } ],
     mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ] } ]
 ```
