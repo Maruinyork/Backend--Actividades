@@ -204,6 +204,7 @@ db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerc
 ```
 resp: { ok: 1 }
 
+```console
 show users
 [ { _id: 'ecommerce.pepe',
     userId: UUID("218fa314-d9df-4663-8661-c650c556704c"),
@@ -211,9 +212,10 @@ show users
     db: 'ecommerce',
     roles: [ { role: 'read', db: 'ecommerce' } ],
     mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ] } ]
+```
 
 [![pepelogin.jpg](https://i.postimg.cc/pVG0thjp/pepelogin.jpg)](https://postimg.cc/5jz5BtnV)
 
-user: pepe no puede acceder desde la consola
+user: pepe no puede acceder desde la consola como admin, la autenticacion es fallida. 
 user: pepeadmin puede ingresar desde la consola
 
