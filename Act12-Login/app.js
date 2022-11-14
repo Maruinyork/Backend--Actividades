@@ -25,7 +25,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { maxAge: 600000 },
     store: MongoStore.create({
-        mongoUrl:process.env.MONGOATLAS_URL ||'mongodb+srv://MaruinYork:backend@cluster0.n9vmygq.mongodb.net/?retryWrites=true&w=majority', 
+        mongoUrl:process.env.MONGOATLAS_URL ||'mongodb+srv://MaruinYork:******@cluster0.n9vmygq.mongodb.net/?retryWrites=true&w=majority', 
         mongoOptions:advancedOptions
     })
 
