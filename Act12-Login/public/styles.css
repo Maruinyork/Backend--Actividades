@@ -1,0 +1,201 @@
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    background-image: url(https://wallpaperaccess.com/full/4745870.jpg);
+    background-position:right;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 500px;
+}
+
+.main {
+    display: block;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    box-shadow: 10px 15px 15px 10px rgb(174, 118, 190);
+}
+
+.log {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    text-align: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding: 10%;
+    border: 1px solid palegoldenrod;
+    width: 40%;
+    margin: 140px auto;
+}
+  
+.log #user, body .log #pass {
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+    color: #000000;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 10px;
+}
+
+
+.products {
+    width: 60%;
+    text-align: center;
+    width: 60%;
+    margin: 50px auto;
+    background-color:transparent;
+}
+
+
+#cardRow {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ } 
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: transparent;
+    width: 20%;
+    margin: 1%;
+    height: auto;
+}
+
+.price {
+    color: rgb(81, 79, 79);
+    font-size: 22px;
+}
+
+.card:hover {
+    opacity: 0.7;
+}
+
+.formBox {
+    border-radius: 5px;
+    text-align: center;
+    background-color:transparent;
+    padding: 10%;
+    border: 1px solid palegoldenrod;
+    width: 40%;
+    margin: 0 auto;
+    height: 380px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: rgb(141, 25, 106);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.submit:hover {
+    opacity: 0.7;
+}
+
+
+.chatBox {
+    border-radius: 5px;
+    background-color:transparent;
+    margin-top: 5%;
+    padding: 0.5%;
+    overflow: hidden;
+    color: black;
+    border: 1px solid palegoldenrod;
+    margin: 35px auto;
+    width: 58%;
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    list-style-type: none;
+    padding: 0% 5%;
+}
+
+#chat > hr {
+    border: 0.5px dashed rgba(189, 184, 184, 0.596);
+}
+
+#chat > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat > input {
+    width: 80%;
+    margin: 8px 10%;
+}
+
+#compresion {
+    margin: 8px 5%;
+}
+
+.chatDiv > input {
+    width: 80%;
+    margin: 8px 1% 8px 5%;
+}
+
+.chatDiv > .submit {
+    width: 20%;
+    margin: 8px 5% 8px 1%;
+}
+
+.chatForm > input {
+    margin: 5px 1% 1px 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    .main, .products{
+        padding: 0px;
+        width: 100%;
+        background-color: white
+    }
+
+    #cardRow {
+        margin: 15px;
+        display: block;
+    }
+
+    .card {
+        width: 90%;
+    }
+    
+} 

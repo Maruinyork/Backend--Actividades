@@ -1,0 +1,46 @@
+div(class="products")
+
+    
+    a(href="http://localhost:5000/api/session/login")
+    h2(style="color:black")="Productos"
+    
+    
+    div(id="cardRow")
+
+        if products
+            each product in products
+                div(class="card")
+                    img(src=product["thumbnail"] || "https://www.bicifan.uy/wp-content/uploads/2016/09/producto-sin-imagen.png" style="width:100%")
+                    h2=product["title"]
+                    h3(class="price")="$" + product["price"]
+
+
+if !form
+    style(type="text/css").
+        
+        .products {
+            background-color: transparent;
+            width: 100%;
+        }
+        
+        .card {
+            width: 15%;
+        }
+
+        #cardRow {
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        @media screen and (max-width: 600px) {
+
+            #cardRow {
+                margin: 15px;
+                display: block;
+            }
+
+            .card {
+                width: 90%;
+            }
+            
+        }

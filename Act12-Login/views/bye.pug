@@ -1,0 +1,21 @@
+html 
+    head
+        title="bye"
+        link(rel="stylesheet", href="/styles.css")
+
+    body
+       
+        div
+           h2(style="color:black")= `Hasta pronto ${username} 👋🏻!`
+           a(href="http://localhost:5000/api/session/login")
+                            span Ingresa nuevamente 👉
+                            
+                            case !logged
+                                    when true 
+                                       div(class='log')
+                                           form(method="POST" action="http://localhost:5000/api/session/login")
+                                           input(type="text" name="username" placeholder="Usuario" required)
+                                           input(type="password" name="password" placeholder="Contraseña" required)
+                                           input(type="submit" class="submit" value="Entrar")
+
+    
