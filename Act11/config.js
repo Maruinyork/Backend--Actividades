@@ -2,7 +2,7 @@ const admin = require("firebase-admin");
 
 const connectFirebase = async () => {
     try {
-        const serviceAccount = require("./ecommerce-92c38-firebase-adminsdk-sovg4-06e238f5ae.json");
+        const serviceAccount = require("./ecommerce.json");
 
         admin.initializeApp({
           credential: admin.credential.cert(serviceAccount),

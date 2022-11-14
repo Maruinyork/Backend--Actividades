@@ -20,3 +20,5 @@ Sobre el desafío entregable de la clase 8, crear una vista en forma de tabla qu
 
 [![5.jpg](https://i.postimg.cc/qqNNVHGz/5.jpg)](https://postimg.cc/GT1LGNVC)
 
+*En ecommerce.json la private_key_id es la que cada uno tenga de su firebase, aca estan ocultas *** asi como el project_id
+
