@@ -1,0 +1,79 @@
+doctype html
+html 
+    head
+        title="eCommerce"
+        link(rel="stylesheet", href="/styles.css")
+        script(src="/socket.io/socket.io.js")
+        script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js")
+
+    body 
+        case username
+            when undefined
+                div(class='log')
+                    form(method="POST" action="http://localhost:5000/api/login")
+                        input(type="text" name="username" placeholder="Usuario" required)
+                        input(type="password" name="password" placeholder="Contraseña" required)
+                        div(class="logDiv")
+                            input(type="button" class="button" onclick="location.href='http://localhost:5000/api/signup';" value="Crear usuario")
+                            input(type="submit" class="submit" value="Entrar")
+            
+            when 'wip'
+                div(class='log')
+                    form(method="POST" action="http://localhost:5000/api/signup")
+                        input(type="text" name="username" placeholder="Nuevo usuario" required)
+                        input(type="password" name="password" placeholder="Nueva contraseña" required)
+                        div(class="logDiv")
+                            input(type="button" class="button" onclick="location.href='http://localhost:5000/api/login';" value="Tengo usuario")
+                            input(type="submit" class="submit" value="Registrarse")
+
+            default
+                if form
+                    h2(style="color:black")= `¡Hola, ${username} 💟!`
+                    a(style={color:"purple"} href="http://localhost:5000/api/logout")
+                       span Desconectarse 
+                
+                else
+                    a(href="http://localhost:5000/api/")
+                    
+
+                div(class="main")
+                    if form
+                        div
+                            div(class="formBox")
+                                h2="Registrar nuevo producto"
+                                
+                                form(id="productForm")
+                                    input(type="text" name="title" placeholder="Título" id="title" required)
+                                    input(type="text" name="thumbnail" placeholder="Foto (url)" id="thumbnail")
+                                    input(type="text" name="detail" placeholder="Details" id="detail")
+                                    input(type="number" name="price" placeholder="Precio" id="price" required)
+                                    input(type="number" name="stock" placeholder="Stock" id="stock" required)
+                                    button(type="submit" class="submit")="Registrar"
+
+
+                            div(class="chatBox")
+                                form(id="chat")
+                                    div(class="chatForm")
+                                        input(type="text" placeholder="Nombre" id="name" required)
+                                        input(type="text" placeholder="Apellido" id="lastname")
+                                        input(type="number" placeholder="Edad" id="age")
+                                    div(class="chatForm")
+                                        input(type="text" placeholder="Alias" id="alias" required)
+                                        input(type="text" placeholder="Avatar" id="avatar")
+                                        input(type="text" placeholder="E-mail" id="email" required)
+
+                                    hr
+                                    ul(id="chat-messages")
+                                    hr
+                                    
+                                    div(class="chatDiv")
+                                        input(type="text" placeholder="Comparti un mensaje" id="message" required)
+                                        input(type="submit" class="submit" value="Enviar")
+                                        
+                                    span(id="compresion")=""
+
+                    include ../views/products.pug
+
+        script
+            include ../public/script.js

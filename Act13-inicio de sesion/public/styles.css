@@ -1,0 +1,198 @@
+body {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("https://wallpaperaccess.com/full/4745870.jpg");
+    background-blend-mode: multiply;
+    background-color: #f1f1f1;
+    height: 500px;
+    background-repeat: repeat;
+    background-position:right;
+    background-size: cover;
+
+}
+
+.main {
+    display: block;
+    flex-direction: row-reverse;
+    align-items: center;
+    background: transparent;
+    justify-content: space-between;
+}
+
+.log {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+    margin: 25%;
+    margin-top: 200px;
+    text-align: center;
+    align-content: center;
+    padding: 100px 55px;
+    border: 1px solid palegoldenrod;
+}
+  
+.log #user, body .log #pass {
+    height: 50px;
+    border: none;
+    border-radius: 2px;
+    color: #000000;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 10px;
+}
+
+.logDiv > input {
+    border: none;
+    outline: 0;
+    padding: 12px 15px;
+    color: white;
+    background-color: purple;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+}
+
+.logDiv > .submit {
+    width: 30%;
+}
+
+.logDiv > .button {
+    width: 30%;
+    margin-right: 1%;
+    background-color: rgb(18, 17, 17)
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.products {
+    background-color: transparent;
+    text-align: center;
+}
+
+#cardRow {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 820px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: transparent;
+    width: 15%;
+    margin: 1%;
+    height: auto;
+}
+
+.price {
+    color: rgb(81, 79, 79);
+    font-size: 22px;
+}
+
+.card:hover {
+    opacity: 0.7;
+}
+
+.formBox {
+    border-radius: 5px;
+    text-align: center;
+    background-color: transparent;
+    padding: 4%;
+    margin:  0 auto;
+    height: 380px;
+    width: 60%;
+}
+
+input {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: purple;
+    text-align: center;
+    cursor: pointer;
+    width: 81%;
+    font-size: 18px;
+}
+
+.submit:hover {
+    opacity: 0.7;
+}
+
+.chatBox {
+    border-radius: 5px;
+    background-color: transparent;
+    height: 425px;
+    margin: 35px auto;
+    padding: 0.5%;
+    overflow: hidden;
+    width: 60%;
+    border: 1px solid palegoldenrod;
+    box-shadow: 10px 15px 15px 10px rgb(174, 118, 190);
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    list-style-type: none;
+    padding: 0% 5%;
+}
+
+#chat > hr {
+    border: 0.5px dashed rgba(189, 184, 184, 0.596);
+}
+
+#chat > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat > input {
+    width: 80%;
+    margin: 8px 10%;
+}
+
+#compresion {
+    margin: 8px 5%;
+}
+
+.chatDiv > input {
+    width: 80%;
+    margin: 8px 1% 8px 5%;
+}
+
+.chatDiv > .submit {
+    width: 20%;
+    margin: 8px 5% 8px 1%;
+}
+
+.chatForm > input {
+    margin: 5px 1% 1px 1%;
+}
+
+

@@ -1,0 +1,21 @@
+div(class="products")
+   
+    a(href="http://localhost:5000/api/session/login")
+    h1(style="color:black")="Productos"
+   
+    a(style={color:"purple", "font-size":"1.1em"} href="http://localhost:5000/api/")
+        span Agregar nuevo producto
+
+    hr
+    a(style={color:"purple", "font-size":"1.1em"} href="http://localhost:5000/api/productos-test")
+        span Otros productos
+
+    div(id="cardRow")
+
+        if products
+            each product in products
+                div(class="card")
+                    img(src=product["thumbnail"] || "https://www.bicifan.uy/wp-content/uploads/2016/09/producto-sin-imagen.png" style="width:100%")
+                    h2=product["title"]
+                    h3(class="price")="$" + product["price"]
+
