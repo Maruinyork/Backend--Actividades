@@ -18,15 +18,17 @@ Una vez logueado el usuario, se lo redirigir√° al inicio, el cual ahora mostrar√
 
 [![5.png](https://i.postimg.cc/3rffZYtM/5.png)](https://postimg.cc/7b7NH8vX)
 
+[![9.png](https://i.postimg.cc/63MkxRwz/9.png)](https://postimg.cc/sQZ6pMMZ)
+
+[![10.png](https://i.postimg.cc/SxV3MCY4/10.png)](https://postimg.cc/v4g0R1v2)
+
 [![6.png](https://i.postimg.cc/VLq8ZJpr/6.png)](https://postimg.cc/1f32f39s)
 
 [![7.png](https://i.postimg.cc/nLHcG4Lh/7.png)](https://postimg.cc/hX5BS7xk)
 
 [![8.png](https://i.postimg.cc/d13C4P03/8.png)](https://postimg.cc/XGMXYPd6)
 
-[![9.png](https://i.postimg.cc/63MkxRwz/9.png)](https://postimg.cc/sQZ6pMMZ)
 
-[![10.png](https://i.postimg.cc/SxV3MCY4/10.png)](https://postimg.cc/v4g0R1v2)
 
 
 
