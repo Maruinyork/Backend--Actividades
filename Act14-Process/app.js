@@ -6,9 +6,11 @@ const { Server:ServerIo } = require("socket.io")
 const io = new ServerIo(httpServer)
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
-
 const session = require('express-session')
 const mongoStore = require('connect-mongo')
+
+//Uso de libreria dotenv//
+require('dotenv').config()
 
 app.set("view engine", "pug")
 app.set("views", "./views")
@@ -17,18 +19,20 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"))
 
-app.use(cookieParser(process.env.SECRET_KEY_COOKIE || 'palabraSecreta'))
+app.use(cookieParser(process.env.SECRET_KEY_COOKIE))
 
 //inicializo el middleware
 app.use(session({
-    secret: process.env.SECRET_KEY_SESSION || 'palabraSecretaSession',
+    secret: process.env.SECRET_KEY_SESSION,
     resave: true,
     saveUninitialized: true,
     rolling: true,
     cookie: { maxAge: 600000 },
-    store: mongoStore.create({mongoUrl: process.env.MONGO_URL || 'mongodb+srv://MaruinYork:b******@cluster0.n9vmygq.mongodb.net/?retryWrites=true&w=majority', mongoOptions:{useNewUrlParser:true, useUnifiedTopology: true}})
+    store: mongoStore.create({mongoUrl: process.env.MONGO_URL, mongoOptions:{useNewUrlParser:true, useUnifiedTopology: true}})
 }))
 
+
+/////////////////////////LOG IN///////////////////////
 
 //Requerir los modulos
 const passport = require('passport')
@@ -38,7 +42,8 @@ const bcrypt = require('bcrypt')
 app.use(passport.initialize())
 app.use(passport.session())
 
-//////// utils /////////
+///////// utils /////////
+
 const userModel = require('./DB/usuarios.model')
 
 const isValidePassword = (user, password) => {
@@ -55,25 +60,27 @@ const checkAuth = (req, res, next) => {
     }else{
         res.redirect('/api/login')
     }
+
 }
 
 //PASSPORT, defino la estrategia de autenticacion
 //Configuro el middleware para inicio de sesión: 
+
 passport.use('login', new LocalStrategy(
-    //Busca al usuario, password en la DB para autenticarlo
     async ( username, password, done )=>{
         let user = await userModel.findOne({username: username})
 
         if (!user) {
             console.log(`No existe el usuario ${username}`)
-            return done(null, false, { message: 'Usuario no encontrado' })
+            return done(null, false, { message: 'User not found' })
         }
             
         if (!isValidePassword(user, password)) {
             console.log('Password incorrecto')
-            return done(null, false, { message: 'Password incorrecto' })
+            return done(null, false, { message: 'Password incorrect' })
         }
-        done(null, user) //pasa el usuario autenticado a la función serializeUser()
+        
+        done(null, user)
     }
 ))
 
@@ -84,12 +91,12 @@ passport.use('signup', new LocalStrategy({
 
     if (user) {
         console.log(`El usuario ${username} ya existe`)
-        return done(null, false, { message: 'El usuario ya existe' })
+        return done(null, false, { message: 'User already exists' })
     }
 
     const newUser = new userModel({
         username: username,
-        password: createHash(password) //asi queda encriptada
+        password: createHash(password)
     })
 
     await newUser.save()
@@ -98,9 +105,7 @@ passport.use('signup', new LocalStrategy({
 
 }))
 
-
 //Este método se encarga de guardar el id del usuario en la sesión
-
 passport.serializeUser(function(user, cb) {
     process.nextTick(function() {
       return cb(null, {
@@ -111,15 +116,13 @@ passport.serializeUser(function(user, cb) {
   });
 
 //Este método toma el id de las sesiones y si existe lo deja pasar
-
 passport.deserializeUser(function(user, cb) {
     process.nextTick(function() {
       return cb(null, user);
     });
   });
 
-
-////////////////////////////////////////////
+/////////////////////////////////////////////////
 
 // Utilizo req.isAuthenticated para proteger las rutas el momento del login
 app.get('/api/login', (req, res) => {
@@ -128,6 +131,7 @@ app.get('/api/login', (req, res) => {
     } else {
         res.render('index', {username:undefined})
     }
+    
 })
 
 //Con passport.authenticate como middleware especifico  successRedirect y failureRedirect,
@@ -144,6 +148,7 @@ app.get('/api/signup', (req, res) => {
     } else {
         res.render('index', {username:'wip'})
     }
+    
 })
 
 //Con passport.authenticate como middleware especifico  successRedirect y failureRedirect,
@@ -152,6 +157,7 @@ app.post('/api/signup', passport.authenticate('signup',{
     failureRedirect: '/api/login'
 }),(req, res) => {
     res.redirect('/api/')
+
 })
 
 //Uso req.logout para limpiar la sesion req.session.passport
@@ -163,18 +169,23 @@ app.get('/api/logout', (req, res, next) => {
 })
 
 //////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
 
 const productsRouter = require('./routes/Productos')
 const testRouter = require('./routes/Test')
+const randomsRouter = require('./routes/Randoms')
 
 app.use("/api/", checkAuth, productsRouter)
 app.use("/api/", testRouter)
+app.use("/api/", randomsRouter)
 
 
 app.use( (req, res) => {
     res.status(404);
-    res.send("Prueba: http://localhost:5000/api/login");
+    res.send("Prueba agregando: /api/login a la ruta");
 })
+
 
 
 ////////////////////////CLIENTE///////////////////////
@@ -182,11 +193,10 @@ app.use( (req, res) => {
 const ProductosDaos = require('./daos/ProductosDaos')
 const db = new ProductosDaos()
 
-//
 const ChatDaosFirebase = require('./daos/ChatDaosFirebase')
 const { Session } = require("inspector")
 const chatdb = new ChatDaosFirebase()
-//
+
 io.on('connection', (socket) => {
     console.log('🟢 Usuario conectado')
 
@@ -196,15 +206,13 @@ io.on('connection', (socket) => {
         console.log(err) ; throw err
     })
 
-    //
     chatdb.crudChat().then((chat) => {
         socket.emit('connection', {"chat":chat})
     }).catch((err) => {
         console.log(err) ; throw err
     })
-    //
 
-    // Nuevos productos
+    //  Nuevos productos
     socket.on('postProduct', (product) => {
         db.add(product)
         io.emit('postProduct', product)
@@ -218,7 +226,6 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('🔴 Usuario desconectado')
     })
-    //
 })
 
 //////////////////////////////////////////////////////

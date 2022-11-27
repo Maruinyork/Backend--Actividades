@@ -1,0 +1,95 @@
+body {
+  margin: 0px;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.page-nav {
+  background-color: white;
+  box-shadow: 1px 1px pink, -1em 0 0.4em olive;
+  position: relative;
+  padding: 3px;
+}
+
+.page-nav img {
+  width: 100px;
+  height: 80px;
+  margin: 0px 50px;
+}
+
+.button-checkout {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(23, 19, 20);
+  transition-duration: 0.4s;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.button-checkout:hover {
+  background-color: rgb(23, 19, 20);
+  color: white;
+}
+
+.page-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.product-container {
+  border-radius: 20px;
+  margin: 15px;
+  padding: 2px 16px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(208, 57, 208, 0.1);
+  background-color: white;
+}
+
+.product-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.product-container img {
+  width: 300px;
+}
+
+.product-container h5,
+.product-container h6 {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.button-add {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(23, 19, 20);
+  transition-duration: 0.4s;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+.button-add:hover {
+  background-color: rgb(23, 19, 20);
+  color: white;
+}
+
+.button:hover{
+  background-color: rgb(23, 19, 20);
+  color: white;
+}
+
+form {
+  background-color: rgb(10, 8, 8);
+  padding:50px;
+  color: white;
+}
