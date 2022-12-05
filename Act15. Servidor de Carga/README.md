@@ -71,7 +71,8 @@ router.get('/info', (req, res) => {
 })
 
 ```
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/nodemonfork.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/nodemonfork.png)
+
 
 
 - Ejecutar el servidor (modos FORK y CLUSTER) con nodemon verificando el número de procesos tomados por node.
@@ -82,15 +83,15 @@ NOTA: Para probar cada uno de ellos por terminal, finalizar el proceso del anter
 nodemon server.js --cluster
 
 ```
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/nodemoncluster.png)
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots//procesadores.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/nodemoncluster.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/procesadores.png)
 
 ```console
 
 nodemon server.js --fork
 
 ```
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/nodemonfork.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/nodemonfork.png)
 
 
 - Ejecutar el servidor (con los parámetros adecuados) utilizando Forever, verificando su correcta operación. Listar los procesos por Forever y por sistema operativo.
@@ -104,22 +105,22 @@ forever list
 forever stopall
 
 ```
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/foreverlist.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/foreverlist.png)
 
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/foreverstopall.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/foreverstopall.png)
 
 
 - Ejecutar el servidor (con los parámetros adecuados: modo FORK) utilizando PM2 en sus modos modo fork y cluster. Listar los procesos por PM2 y por sistema operativo.
 
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2startserver.png)
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2stopserver.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2startserver.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2stopserver.png)
 
 Modo FORK:
 ```console
 pm2 start server.js --name="FORKEn8080" --watch -- 8080
 
 ```
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2startfork.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2startfork.png)
 
 Modo CLUSTER:
 ```console
@@ -127,13 +128,13 @@ pm2 start server.js --name="ClusterEn8082" --watch -i 2  -- -p 8082
 pm2 list
 
 ```
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2list.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2list.png)
 
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2monit.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2monit.png)
 
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2startserverwindows.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2startserverwindows.png)
 
-![Image text](https://github.com/Maruinyork/Act15-servidorcarga/blob/main/img/screenshots/pm2stopserver.png)
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/pm2stopserver.png)
 
 
 Consigna 2:
@@ -217,7 +218,9 @@ http {
 
 ```
 
-Incluir el archivo de configuración de nginx junto con el proyecto.
-Incluir también un pequeño documento en donde se detallen los comandos que deben ejecutarse por línea de comandos y los argumentos que deben enviarse para levantar todas las instancias de servidores de modo que soporten la configuración detallada en los puntos anteriores.
+![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act15.%20Servidor%20de%20Carga/img/screenshots/welcomenginx.png)
+
+Incluir el archivo de configuración de nginx junto con el proyecto. ✅
+Incluir también un pequeño documento en donde se detallen los comandos que deben ejecutarse por línea de comandos y los argumentos que deben enviarse para levantar todas las instancias de servidores de modo que soporten la configuración detallada en los puntos anteriores. ✅
 
 
