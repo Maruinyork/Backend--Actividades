@@ -2,10 +2,9 @@
 ## Consigna
 ### Loggers, Gzip y análisis de performance
 
-#### Usuario: Maruinyork
-#### Contraseña: admin
+#### Usuario: Maruinyork 
+     Contraseña: admin
 
-### Resolución
 
 >>Consigna:
 
@@ -22,7 +21,9 @@ Considerar el siguiente criterio:
 ● Enviar sólo los logs de error a un archivo llamada error.log
 
 
-Compresión con gzip
+
+### Resolución
+### Compresión con gzip
 Use “http://localhost:8080/api/randoms” para realizar la comparación.
 Para la primera imagen no se aplicó compresión, se puede apreciar una diferencia de
 tamaño y tiempo de respuesta entre ambas solicitudes
