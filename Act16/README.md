@@ -2,8 +2,8 @@
 ## Consigna
 ### Loggers, Gzip y análisis de performance
 
-Usuario: Maruinyork
-Contraseña: admin
+#### Usuario: Maruinyork
+#### Contraseña: admin
 
 ### Resolución
 
@@ -83,8 +83,6 @@ node --prof-process profiling/nolog-v8.log > profiling/result_nolog.txt
 
 ```
 
-![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act16/img/artilleryforkycluster.png)
-
 ![Image text](https://github.com/Maruinyork/Backend--Actividades/blob/main/Act16/img/lognolog.png)
 
 
@@ -102,6 +100,7 @@ artillery quick --count 50 -n 20 http://localhost:8080/api/randoms?cant=99999999
 A la derecha tenemos los resultados del servidor en modo Cluster, y a la izquierda en modo
 Fork. Los tiempos de respuesta del primero son en general más bajos que los del segundo,
 por lo que es posible concluir que el modo Cluster es el más eficiente de ambos.
+
 
 
 >>Consigna:
