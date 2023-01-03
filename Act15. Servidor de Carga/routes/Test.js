@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const os = require('node:os');
+
 const { faker } = require('@faker-js/faker')
 
 faker.locale = 'es'
@@ -37,12 +37,11 @@ router.get('/info', (req, res) => {
     const processInfo ={
         'Argumentos de entrada' : process.argv.slice(2),
         'Nombre de la plataforma ': process.platform,
-        'Versión de node.js': process.versions['node'],
+        'Version de node.js': process.versions['node'],
         'Memoria total reservada': process.memoryUsage()['rss'],
-        'Path de ejecución': process.argv[1],
+        'Path de ejecucion': process.argv[1],
         'Process id': process.pid,
-        'Carpeta del proyecto': process.cwd(),
-        'Número de procesadores': os.cpus().length //consigna 1
+        'Carpeta del proyecto': process.cwd()
     };
     res.status(200).json(processInfo);
 })

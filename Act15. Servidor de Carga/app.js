@@ -17,7 +17,7 @@ app.set("views", "./views")
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static("public")) //nginx se encarga de ofrecer los recursos estáticos
+app.use(express.static("public"))
 
 app.use(cookieParser(process.env.SECRET_KEY_COOKIE))
 

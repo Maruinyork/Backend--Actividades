@@ -22,7 +22,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.5.0"
   },
-  "name": "act.15-servidorcarga",
+  "name": "act.14-process",
   "version": "1.0.0",
   "main": "server.js",
   "keywords": [],
